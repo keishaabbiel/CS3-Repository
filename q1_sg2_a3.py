@@ -2,6 +2,7 @@
 # 9 - Arayat
 
 #Modifications: added loop, enhanced spacing, and invalid message for non-integer answers
+#Tested on OnlineGDB
 
 #Chinese Zodiac index
 zodiac = [
