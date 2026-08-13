@@ -1,0 +1,4 @@
+year = int(input("Enter your birth year: "))
+
+if year>1900:
+  
