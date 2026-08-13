@@ -1,7 +1,7 @@
 # 28 - RAMOS Keisha Abbiel B.
 # 9 - Arayat
 
-#Modifications: added loop
+#Modifications: added loop, enhanced spacing, and invalid message for non-integer answers
 
 #Chinese Zodiac index
 zodiac = [
@@ -21,14 +21,19 @@ zodiac = [
 
 #loop structure
 while True:
-  birth_year = int(input("Enter your birth year: "))
-
-#when user inputs invalid data
-  if birth_year < 1900:
-    print("\nInvalid year, it should not be earlier than 1900.")
-    print("Please enter your birth year again.\n")
-#when user inputs correct data
-  else:
-    index = (birth_year - 1900) % 12
-    print("Your Chinese Zodiac Sign is :", zodiac[index])
-    break
+    #when user inputs an integer
+    try:
+        birth_year = int(input("Enter your birth year : "))
+        #when user inputs an invalid integer
+        if birth_year < 1900:
+            print("\n\tInvalid year, it should not be earlier than 1900.")
+            print("\tPlease enter your birth year again.\n")
+        #when user inputs a valid integer
+        else:
+            index = (birth_year - 1900) % 12
+            print("\n \tYour Chinese Zodiac Sign is :", zodiac[index])
+            break
+    #when user inputs a non-integer
+    except ValueError:
+        print("\n\tInvalid input, please enter a number.\n")
+  
