@@ -1,4 +1,7 @@
 year = int(input("Enter your birth year: "))
 
 if year>1900:
-  
+  code
+
+else:
+  print = ("invalid etc")
