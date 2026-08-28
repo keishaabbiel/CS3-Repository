@@ -1,22 +1,15 @@
-# to be continued
-
-'''
-hero
-- health (hp)
-
-+ damage taken(attack)
-+ new health(hp - attack)
-'''
-
 class Hero:
-    def __init__(hp, amount, take_damage):
-        self.hp == 100
-        self.amount = int(input("How much damage do you want to deal?"))
-        take_damage = self.take_damage(amount) - hp
-        
-        hero1 = "Arthur"
-        hero2 = "Morgana"
-        
-    def damage_done():
-        print("Arthur's health is at", take_damage)
-        print("Morgana's health is at", hp)
+    def __init__(self, name, hp):
+        self.name = name
+        self.hp = hp
+
+    def take_damage(self, amount):
+        self.hp -= amount
+
+Arthur = Hero("Arthur", 100)
+Morgana = Hero("Morgana", 100)
+
+Arthur.take_damage(10)
+
+print(Arthur.name, "HP:", Arthur.hp)
+print(Morgana.name, "HP:", Morgana.hp)
